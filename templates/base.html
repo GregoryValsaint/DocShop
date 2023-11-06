@@ -12,6 +12,13 @@
     <h1>La boutique de Greg</h1>
 </a>
 
+{% if user.is_authenticated %}
+    <h4>De retour parmi nous, {{ user.username }}</h4>
+    <a href="{% url 'logout' %}">Déconnexion</a>
+{% else %}
+<a href="{% url 'login' %}">Connexion</a>
+    <a href="{% url 'signup' %}">S'inscrire</a>
+{% endif %}
 
 {% block content %}
 {% endblock %}
