@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ("description", models.TextField(blank=True)),
                 (
                     "thumbnail",
-                    models.ImageField(blank=True, null=True, upload_to="product"),
+                    models.ImageField(blank=True, null=True, upload_to="products"),
                 ),
             ],
         ),
